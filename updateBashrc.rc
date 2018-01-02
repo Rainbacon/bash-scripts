@@ -1,0 +1,14 @@
+#!/bin/bash
+
+function odnt {
+  case $1 in
+    a)
+      name=$2
+      command=$3
+      al="alias $name='$command'"
+      echo "Adding $al to the list of aliases"
+      sudo echo "$al" >> ~/.bashrc
+      ;;
+  esac
+  . ~/.bashrc
+}
