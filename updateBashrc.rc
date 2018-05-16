@@ -9,6 +9,9 @@ function odnt {
       echo "Adding $al to the list of aliases"
       sudo echo "$al" >> ~/.bashrc
       ;;
+   e)
+      sudo nano ~/.bashrc
+      ;;
   esac
   . ~/.bashrc
 }
