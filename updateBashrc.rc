@@ -2,14 +2,14 @@
 
 function odnt {
   case $1 in
-    a)
+    -a)
       name=$2
       command=$3
       al="alias $name='$command'"
       echo "Adding $al to the list of aliases"
       sudo echo "$al" >> ~/.bashrc
       ;;
-   e)
+   -e)
       sudo nano ~/.bashrc
       ;;
   esac
