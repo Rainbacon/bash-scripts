@@ -1,0 +1,9 @@
+#!/bin/bash
+
+function newb() {
+    git checkout -b $1
+}
+
+function pushup() {
+    git push -u origin $1
+}
