@@ -12,6 +12,9 @@ function odnt {
    "-e" | "--edit")
       sudo nano ~/.bashrc
       ;;
+   "-l" | "--list")
+      cat ~/.bashrc | grep "alias"
+      ;;
   esac
   . ~/.bashrc
 }
