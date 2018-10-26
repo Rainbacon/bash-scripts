@@ -15,6 +15,14 @@ function odnt {
    "-l" | "--list")
       cat ~/.bashrc | grep "alias"
       ;;
+   "-r" | "--rename")
+      name=$2
+      command=$3
+      sed -i '' "/alias $name/d" ~/.bashrc
+      al="alias $name='$command'"
+      echo "Adding $al to the list of aliases"
+      sudo echo "$al" >> ~/.bashrc
+      ;;
   esac
   . ~/.bashrc
 }
