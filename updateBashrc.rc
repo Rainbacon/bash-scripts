@@ -13,7 +13,12 @@ function odnt {
       sudo nano ~/.bashrc
       ;;
    "-l" | "--list")
-      cat ~/.bashrc | grep "alias"
+      if [-z "$2" ]
+      then
+          cat ~/.bashrc | grep "alias"
+      else
+          cat ~/.bashrc | grep "alias $2"
+      fi
       ;;
    "-r" | "--rename")
       name=$2
