@@ -10,7 +10,7 @@ function odnt {
       sudo echo "$al" >> ~/.bashrc
       ;;
    "-e" | "--edit")
-      sudo nano ~/.bashrc
+      sudo vim ~/.bashrc
       ;;
    "-l" | "--list")
       if [-z "$2" ]
