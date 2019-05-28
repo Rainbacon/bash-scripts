@@ -2,3 +2,5 @@
 
 alias oops="sudo !!"
 alias refresh=". ~/.bashrc"
+alias ctrlc="xclip -selection c"
+alias ctrlv="xclip -selection clipboard -o"
