@@ -5,7 +5,6 @@ for script in /usr/local/bin/UserScripts/*.rc
 do
     . "$script"
 done
-alias party='cd ~/Code/bash-scripts'
 function quiet(){
   eval "$(ssh-agent -s)"
   ssh-add -K ~/.ssh/ghe_id_rsa
