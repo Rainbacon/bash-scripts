@@ -7,6 +7,9 @@ do
 done
 function quiet(){
   eval "$(ssh-agent -s)"
-  ssh-add -K ~/.ssh/ghe_id_rsa
+  for key in ~/.ssh/*_rsa
+  do
+    ssh-add "$key"
+  done
 }
 
