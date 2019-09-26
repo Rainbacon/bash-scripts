@@ -12,4 +12,4 @@ function quiet(){
     ssh-add "$key"
   done
 }
-
+test -f ~/.git-completion.bash && . $_
