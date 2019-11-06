@@ -7,3 +7,23 @@ function newb() {
 function pushup() {
     git push -u origin $1
 }
+
+function fetchbase() {
+  remote="upstream"
+  branch="master"
+  while getopts "r:b:" opt; do
+    case $opt in
+      "-r" | "--remote")
+        remote=$OPTARG
+        ;;
+      "-b" | "--branch")
+        branch=$OPTARG
+        ;;
+    esac
+  done
+  echo "Fetching from $remote $branch"
+  git fetch "$remote" "$branch"
+  echo "Rebasing onto $remote/$branch"
+  git rebase "$remote/$branch"
+}
+
