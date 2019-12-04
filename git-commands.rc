@@ -11,13 +11,17 @@ function pushup() {
 function fetchbase() {
   remote="upstream"
   branch="master"
-  while getopts "r:b:" opt; do
-    case $opt in
+  while (( "$#" )); do
+    case $1 in
       "-r" | "--remote")
-        remote=$OPTARG
+        remote=$2
+        shift
+        shift
         ;;
       "-b" | "--branch")
-        branch=$OPTARG
+        branch=$2
+        shift 
+        shift 
         ;;
     esac
   done
