@@ -1,3 +1,4 @@
 function refresh-scripts() {
     sudo cp *.rc /usr/local/bin/UserScripts
+    sudo cp local/*.rc /usr/local/bin/UserScripts
 }

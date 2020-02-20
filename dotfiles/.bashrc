@@ -1,6 +1,7 @@
 export PS1="\e[0;32m\d \@:\e[m \e[0;36m\w\e[m \[\033[33;1m\](\$(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[\033[m\] \$ "
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+export PATH="/usr/local/bin/UserScripts:$PATH"
 for script in /usr/local/bin/UserScripts/*.rc
 do
     . "$script"
