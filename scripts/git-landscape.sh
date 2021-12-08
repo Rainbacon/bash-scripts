@@ -1,13 +1,14 @@
 #!/bin/bash
 
 IFS=',' read -r -a projects <<< "$GIT_PROJECTS"
+format="|%-31s|%-80s|\n"
 
 echo "------------------------------------------------------------------------------------------------------------------"
-printf "|%-31s|%-80s|\n" "Project" "Branch"
+printf "$format" "Project" "Branch"
 echo "------------------------------------------------------------------------------------------------------------------"
 for project in "${projects[@]}"
 do
   branch=$(git -C ~/Code/$project rev-parse --abbrev-ref HEAD 2>&1)
-  printf "|%-21s|%-50s|\n" "$project" "$branch"
+  printf "$format" "$project" "$branch"
 done
 echo "------------------------------------------------------------------------------------------------------------------"
