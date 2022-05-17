@@ -35,3 +35,7 @@ function fetchbase() {
   git rebase "$remote/$branch"
 }
 
+function gbase() {
+  trunk=$(git branch -l | grep -E '( main$| master$)' -o | sed 's/^ *//g')
+  git checkout $trunk
+}
