@@ -4,4 +4,4 @@ alias oops="sudo !!"
 alias refresh=". ~/.bashrc"
 alias ctrlc="xclip -selection c"
 alias ctrlv="xclip -selection clipboard -o"
-alias party='cd ~/Code/bash-scripts'
+alias party='cd ~/code/bash-scripts'
