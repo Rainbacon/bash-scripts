@@ -12,10 +12,11 @@ echo "Downloading standard tools"
 echo "--------------------------------------"
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 echo "--------------------------------------"
-echo "Installing user_bashrc"
+echo "Installing user dotfiles"
 echo "--------------------------------------"
 sudo cp dotfiles/.bashrc ~/.user_bashrc
 sudo echo ". ~/.user_bashrc" >> ~/.bashrc
 sudo cat dotfiles/.bash_profile >> ~/.bash_profile
+sudo cp dotfiles/.vimrc ~/.vimrc
 . ~/.bash_profile
 . ~/.bashrc
